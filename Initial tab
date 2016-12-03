@@ -70,3 +70,5 @@ end_point + geom_leg(aes(x = start.station.longitude, y = start.station.latitude
  ###[dat.map.ten$start.station.name== input$StartStation]
   
 ```
+
+aggregate(tripduration~start.station.name,dat,mean)
