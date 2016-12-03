@@ -84,3 +84,13 @@ ymin <- min(day.data$Freq)
 ymax <- max(day.data$Freq)
 plot.window( xlim =c(1,31),ylim=c(ymin,ymax))
 plot(x=day.data$day, y=day.data$Freq,bty="n",yaxt="n",xlab="Day of Month",ylab="Number of bike trip")
+
+
+newtable <- aggregate(tripduration~start.station.name,dat,mean)
+
+newtable
+averageduration <- arrange(newtable, desc(tripduration))
+
+
+
+
